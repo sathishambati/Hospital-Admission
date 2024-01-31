@@ -1,0 +1,70 @@
+@charset "ISO-8859-1";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: #AECCE4;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+}
+
+nav .logo{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 10px;
+    font-size: xx-large;
+    
+}
+
+nav .contents{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav .contents a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+    position: relative;
+}
+
+nav .contents a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    position: absolute;
+    bottom: -2px;
+    transition: width 0.3s;
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -ms-transition: width 0.3s;
+    -o-transition: width 0.3s;
+}
+
+nav .contents a:hover{
+    color: darkblue;
+    
+}
+
+nav .contents a:hover::after{
+    width: 100%;
+
+}
+
+nav .side{
+    display: flex;
+    justify-content: right;
+    margin-right: 15px;
+    gap: 50px;
+}
